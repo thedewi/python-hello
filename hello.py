@@ -1,3 +1,10 @@
+import argparse
+from pathlib import Path
+
 from pyfiglet import figlet_format
 
-print(figlet_format("hello"))
+parser = argparse.ArgumentParser(description="Render a file's contents as ASCII art.")
+parser.add_argument("file", help="path to the file to render")
+args = parser.parse_args()
+
+print(figlet_format(Path(args.file).read_text()), end="")
