@@ -1,5 +1,8 @@
+from pyfiglet import figlet_format
+
+
 def main():
-    print("Hello from python-hello!")
+    print(figlet_format("hello"))
 
 
 if __name__ == "__main__":
